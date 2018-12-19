@@ -116,7 +116,7 @@ margin: 20px 20px 0 20px;
     80%
     {
         left: 0px;
-        opacity: 0,8
+      
     }
 
     100%
@@ -143,7 +143,7 @@ margin: 20px 20px 0 20px;
     80%
     {
       right: 0px; 
-      opacity: 0.8; 
+      
     }
 
     100%
@@ -167,7 +167,7 @@ margin: 20px 20px 0 20px;
 
     80%
     {
-      opacity: 0,8
+      
 
     }
 
@@ -182,37 +182,40 @@ margin: 20px 20px 0 20px;
 /* bouton */ 
 .btn:link,.btn:visited
 {
-
-
+   margin-top: 3%;
+    border-radius: 50px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 12px;
+    padding: 15px 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 100px;
+    animation: moveInRight 2s ease-out;
 
 }
 
 .btn:hover{
 /*box-shadow: 0 10px 20px rgba(225,225,225,0.3);
 transition: box-shadow 0.3s ease-in-out;*/
-   transition:all 0.4s ease 0s;
-   box-shadow: 0 5px 15px rgba(0,0,0,0.3)
-   
-
-   
-
+   transition: translateY(-3px);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  
 }
 .btn:active
 {
-  
-   
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2)
 }
 
 .btn-white
 {
-   text-decoration: none;
-   border-radius: 60px;
    background-color: #fff;
-   padding: 1.7%;
-   padding-left: 40px;
-   padding-right: 40px;
    color: gray;
-   position: relative;
+   padding: 22px 30px 22px 30px;
 
 
 }
@@ -221,6 +224,18 @@ transition: box-shadow 0.3s ease-in-out;*/
 
 .btn::after /* l'element fils apres le bouton */
 {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 80px;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: .4s; 
+  background-color: #fff;
+  border-radius: 50px;
 
 
 }
@@ -235,8 +250,14 @@ transition: box-shadow 0.3s ease-in-out;*/
 
 .btn:hover::after
 {
-   box-shadow: 0 5px 15px black;
-   transition: box-shadow 0.1s ease-in-out;
+   transform: scale(1.8.1.8);
+   background-color: #fff;
+   opacity: 0;
+   transition: .4s;
+   background-color: #fff;
+   opacity: 0;
+   transform: scale(2,2);
+   transition: .5s;
    
 
 
@@ -253,4 +274,6 @@ transition: box-shadow 0.3s ease-in-out;*/
 
 
  
- 
+
+
+
